@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nGn-0a-oxT">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="BXU-Pi-NDe">
@@ -16,24 +28,128 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flight App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6j4-9O-vRI">
-                                <rect key="frame" x="186" y="165" width="78" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginScreenBG" translatesAutoresizingMaskIntoConstraints="NO" id="WR6-z2-cJC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="313.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flight App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6j4-9O-vRI">
+                                <rect key="frame" x="93" y="148" width="219" height="47"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="airbusBG" translatesAutoresizingMaskIntoConstraints="NO" id="5R7-pX-xpn">
+                                <rect key="frame" x="0.0" y="114" width="397" height="259"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="K9K-WQ-Ag1">
+                                <rect key="frame" x="25" y="409" width="364" height="262"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Posta" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J7q-OR-ZRP">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="54"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="54" id="t8F-nh-DcM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4vx-3i-Giu">
+                                        <rect key="frame" x="0.0" y="73" width="364" height="54"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="54" id="0If-pW-5Xn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AhB-j3-70g">
+                                        <rect key="frame" x="0.0" y="146" width="364" height="47"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vto-pc-mEg">
+                                                <rect key="frame" x="10" y="13" width="18" height="18"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="18" id="XX3-Rq-5g9"/>
+                                                    <constraint firstAttribute="height" constant="18" id="pZ8-kd-1Ky"/>
+                                                </constraints>
+                                                <color key="tintColor" name="tintColor"/>
+                                                <state key="normal" image="square" catalog="system"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beni Hatırla" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5b-k2-RxH">
+                                                <rect key="frame" x="39" y="12" width="218" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="OVF-2V-XD6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                <color key="textColor" name="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="47" id="05s-qP-8ef"/>
+                                            <constraint firstItem="Vto-pc-mEg" firstAttribute="leading" secondItem="AhB-j3-70g" secondAttribute="leading" constant="10" id="E7P-29-0Je"/>
+                                            <constraint firstItem="Vto-pc-mEg" firstAttribute="centerY" secondItem="P5b-k2-RxH" secondAttribute="centerY" id="Odq-x2-VMH"/>
+                                            <constraint firstItem="P5b-k2-RxH" firstAttribute="top" secondItem="AhB-j3-70g" secondAttribute="top" constant="12" id="URk-m8-PMs"/>
+                                            <constraint firstItem="P5b-k2-RxH" firstAttribute="leading" secondItem="Vto-pc-mEg" secondAttribute="trailing" constant="11" id="qem-M4-jzU"/>
+                                            <constraint firstAttribute="trailing" secondItem="P5b-k2-RxH" secondAttribute="trailing" constant="107" id="zTm-cf-4r2"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQT-M7-Riu">
+                                        <rect key="frame" x="0.0" y="212" width="364" height="50"/>
+                                        <color key="backgroundColor" name="buttonColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="j5d-hD-y0e"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                                        <state key="normal" title="Giriş Yap">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionLogin:" destination="nGn-0a-oxT" eventType="touchUpInside" id="LlD-Nn-Ug6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gI1-2m-Wet"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5R7-pX-xpn" firstAttribute="top" secondItem="gI1-2m-Wet" secondAttribute="top" constant="70" id="0dy-Ib-vTq"/>
+                            <constraint firstItem="K9K-WQ-Ag1" firstAttribute="leading" secondItem="gI1-2m-Wet" secondAttribute="leading" constant="25" id="3GK-Om-Cvd"/>
+                            <constraint firstItem="WR6-z2-cJC" firstAttribute="trailing" secondItem="gI1-2m-Wet" secondAttribute="trailing" id="9pr-9u-eR9"/>
+                            <constraint firstItem="WR6-z2-cJC" firstAttribute="leading" secondItem="gI1-2m-Wet" secondAttribute="leading" id="CrA-XJ-fty"/>
+                            <constraint firstItem="gI1-2m-Wet" firstAttribute="trailing" secondItem="6j4-9O-vRI" secondAttribute="trailing" constant="102" id="axi-vN-Hcs"/>
+                            <constraint firstItem="K9K-WQ-Ag1" firstAttribute="top" secondItem="5R7-pX-xpn" secondAttribute="bottom" constant="36" id="dkA-2T-kLY"/>
+                            <constraint firstItem="gI1-2m-Wet" firstAttribute="trailing" secondItem="5R7-pX-xpn" secondAttribute="trailing" constant="17" id="eGM-H3-qJ3"/>
+                            <constraint firstItem="6j4-9O-vRI" firstAttribute="leading" secondItem="gI1-2m-Wet" secondAttribute="leading" constant="93" id="ggY-7H-ytD"/>
+                            <constraint firstItem="WR6-z2-cJC" firstAttribute="top" secondItem="aoX-G8-t53" secondAttribute="top" id="hmj-T4-lVZ"/>
+                            <constraint firstItem="gI1-2m-Wet" firstAttribute="trailing" secondItem="K9K-WQ-Ag1" secondAttribute="trailing" constant="25" id="iDl-av-Fp8"/>
+                            <constraint firstItem="5R7-pX-xpn" firstAttribute="leading" secondItem="gI1-2m-Wet" secondAttribute="leading" id="naV-L5-o2c"/>
+                            <constraint firstItem="WR6-z2-cJC" firstAttribute="height" secondItem="aoX-G8-t53" secondAttribute="height" multiplier="280:800" id="njS-nR-tXJ"/>
+                            <constraint firstItem="6j4-9O-vRI" firstAttribute="top" secondItem="gI1-2m-Wet" secondAttribute="top" constant="104" id="xLz-Ee-UhG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnCheckBox" destination="Vto-pc-mEg" id="o21-Ok-bz5"/>
+                        <outlet property="btnLogin" destination="bQT-M7-Riu" id="ELY-a7-0Ma"/>
+                        <outlet property="tfEmail" destination="J7q-OR-ZRP" id="bFV-jt-8K4"/>
+                        <outlet property="tfPassword" destination="4vx-3i-Giu" id="PFQ-gs-mTe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="toG-cV-GMW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-171" y="-2"/>
+            <point key="canvasLocation" x="-171.01449275362319" y="-2.0089285714285712"/>
         </scene>
     </scenes>
     <resources>
+        <image name="airbusBG" width="360" height="259"/>
+        <image name="loginScreenBG" width="374" height="280"/>
+        <image name="square" catalog="system" width="128" height="114"/>
+        <namedColor name="buttonColor">
+            <color red="0.10196078431372549" green="0.49803921568627452" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textColor">
+            <color red="0.14901960784313725" green="0.19607843137254902" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tintColor">
+            <color red="0.85490196078431369" green="0.85490196078431369" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

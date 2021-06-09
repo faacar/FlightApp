@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7270E21D26714D3100BDA379 /* FlightInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7270E21C26714D3100BDA379 /* FlightInfoViewController.swift */; };
+		7270E22126714D3D00BDA379 /* FlightInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7270E22026714D3D00BDA379 /* FlightInfo.storyboard */; };
+		72D3762A267117C30019EA1E /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D37629267117C30019EA1E /* SplashViewController.swift */; };
 		72F1CD262670D77700D3ACEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F1CD252670D77700D3ACEC /* AppDelegate.swift */; };
 		72F1CD282670D77700D3ACEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F1CD272670D77700D3ACEC /* SceneDelegate.swift */; };
 		72F1CD2A2670D77700D3ACEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F1CD292670D77700D3ACEC /* ViewController.swift */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7270E21C26714D3100BDA379 /* FlightInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightInfoViewController.swift; sourceTree = "<group>"; };
+		7270E22026714D3D00BDA379 /* FlightInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FlightInfo.storyboard; sourceTree = "<group>"; };
+		72D37629267117C30019EA1E /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		72F1CD222670D77700D3ACEC /* FlightApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72F1CD252670D77700D3ACEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72F1CD272670D77700D3ACEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +55,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7270E21B26714D2200BDA379 /* FlightInfo */ = {
+			isa = PBXGroup;
+			children = (
+				7270E21C26714D3100BDA379 /* FlightInfoViewController.swift */,
+				7270E22026714D3D00BDA379 /* FlightInfo.storyboard */,
+			);
+			path = FlightInfo;
+			sourceTree = "<group>";
+		};
+		72D37626267116900019EA1E /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				72D37629267117C30019EA1E /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		72F1CD192670D77700D3ACEC = {
 			isa = PBXGroup;
 			children = (
@@ -103,7 +126,9 @@
 		72F1CD452670F4F900D3ACEC /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				72D37626267116900019EA1E /* Splash */,
 				72F1CD462670F50B00D3ACEC /* Login */,
+				7270E21B26714D2200BDA379 /* FlightInfo */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -177,6 +202,7 @@
 				72F1CD432670F1A700D3ACEC /* Roboto-Bold.ttf in Resources */,
 				72F1CD482670F52300D3ACEC /* LoginPage.storyboard in Resources */,
 				72F1CD322670D77B00D3ACEC /* LaunchScreen.storyboard in Resources */,
+				7270E22126714D3D00BDA379 /* FlightInfo.storyboard in Resources */,
 				72F1CD2F2670D77B00D3ACEC /* Assets.xcassets in Resources */,
 				72F1CD422670F1A700D3ACEC /* Roboto-Medium.ttf in Resources */,
 				72F1CD412670F1A700D3ACEC /* Roboto-Black.ttf in Resources */,
@@ -192,10 +218,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7270E21D26714D3100BDA379 /* FlightInfoViewController.swift in Sources */,
 				72F1CD4B2670F53900D3ACEC /* LoginViewController.swift in Sources */,
 				72F1CD2A2670D77700D3ACEC /* ViewController.swift in Sources */,
 				72F1CD262670D77700D3ACEC /* AppDelegate.swift in Sources */,
 				72F1CD282670D77700D3ACEC /* SceneDelegate.swift in Sources */,
+				72D3762A267117C30019EA1E /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,24 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aqt-W9-ana">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Splash View Controller-->
+        <scene sceneID="sgy-G8-q6U">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="CEU-g2-aPW" customClass="SplashViewController" customModule="FlightApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GkI-M2-lHC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenPlane " translatesAutoresizingMaskIntoConstraints="NO" id="Xmc-mt-CVr">
+                                <rect key="frame" x="49" y="317" width="316" height="164"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flight     App" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYd-cL-qd8">
+                                <rect key="frame" x="96" y="498" width="222" height="114.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dYd-cL-qd8" secondAttribute="height" multiplier="182:94" id="vv9-9z-fyB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JEs-Fk-x7N"/>
+                        <color key="backgroundColor" name="flightBlue"/>
+                        <constraints>
+                            <constraint firstItem="dYd-cL-qd8" firstAttribute="top" secondItem="Xmc-mt-CVr" secondAttribute="bottom" constant="17" id="JB4-M3-tGy"/>
+                            <constraint firstItem="dYd-cL-qd8" firstAttribute="centerX" secondItem="Xmc-mt-CVr" secondAttribute="centerX" id="T18-t5-nCd"/>
+                            <constraint firstItem="dYd-cL-qd8" firstAttribute="leading" secondItem="JEs-Fk-x7N" secondAttribute="leading" constant="96" id="dSL-xL-QkI"/>
+                            <constraint firstItem="JEs-Fk-x7N" firstAttribute="trailing" secondItem="Xmc-mt-CVr" secondAttribute="trailing" constant="49" id="hlE-UV-zcW"/>
+                            <constraint firstItem="Xmc-mt-CVr" firstAttribute="leading" secondItem="JEs-Fk-x7N" secondAttribute="leading" constant="49" id="n4g-Qw-Fci"/>
+                            <constraint firstItem="JEs-Fk-x7N" firstAttribute="trailing" secondItem="dYd-cL-qd8" secondAttribute="trailing" constant="96" id="sdn-lK-JRG"/>
+                            <constraint firstItem="Xmc-mt-CVr" firstAttribute="top" secondItem="JEs-Fk-x7N" secondAttribute="top" constant="273" id="zFp-yq-ae2"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Ii7-Jm-R9o"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WcY-2c-skJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1728.985507246377" y="138.61607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VQ7-4Q-U6O">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="aqt-W9-ana" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zjs-pe-2gs">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CEU-g2-aPW" kind="relationship" relationship="rootViewController" id="G1n-2B-CnH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9bP-hi-qWq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="818.84057971014499" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="launchScreenPlane " width="276" height="163"/>
+        <namedColor name="flightBlue">
+            <color red="0.10588235294117647" green="0.33725490196078434" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
