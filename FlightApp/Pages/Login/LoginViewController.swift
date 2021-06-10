@@ -29,7 +29,8 @@ final class LoginViewController: UIViewController {
     private func loginUser() {
         let email = tfEmail.text
         let password = tfPassword.text
-        if email == "appcent@appcent.mobi" && password == "123456" {
+        //appcent@appcent.mobi -- 123456
+        if email == "a" && password == "a" {
             showFlightInfoPage()
         } else {
             print("Bilgileriniz hatalidir -- Lutfen bilgilerini kontrol ediniz === ALERT")
