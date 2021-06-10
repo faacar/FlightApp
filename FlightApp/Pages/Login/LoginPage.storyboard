@@ -49,7 +49,7 @@
                                             <constraint firstAttribute="height" constant="54" id="t8F-nh-DcM"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4vx-3i-Giu">
                                         <rect key="frame" x="0.0" y="73" width="364" height="54"/>
@@ -57,7 +57,7 @@
                                             <constraint firstAttribute="height" constant="54" id="0If-pW-5Xn"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AhB-j3-70g">
                                         <rect key="frame" x="0.0" y="146" width="364" height="47"/>
@@ -70,6 +70,9 @@
                                                 </constraints>
                                                 <color key="tintColor" name="tintColor"/>
                                                 <state key="normal" image="square" catalog="system"/>
+                                                <connections>
+                                                    <action selector="actionRememberMe:" destination="nGn-0a-oxT" eventType="touchUpInside" id="RBp-Rr-eEd"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beni Hatırla" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5b-k2-RxH">
                                                 <rect key="frame" x="39" y="12" width="218" height="20"/>
@@ -126,8 +129,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnCheckBox" destination="Vto-pc-mEg" id="o21-Ok-bz5"/>
                         <outlet property="btnLogin" destination="bQT-M7-Riu" id="ELY-a7-0Ma"/>
+                        <outlet property="btnRememberMe" destination="Vto-pc-mEg" id="o21-Ok-bz5"/>
                         <outlet property="tfEmail" destination="J7q-OR-ZRP" id="bFV-jt-8K4"/>
                         <outlet property="tfPassword" destination="4vx-3i-Giu" id="PFQ-gs-mTe"/>
                     </connections>

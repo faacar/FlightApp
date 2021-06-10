@@ -29,6 +29,7 @@ class FlightInfoCustomTableViewCell: UITableViewCell {
         lblArrivalEstimated.text = dataModel.arrival?.estimated?.formatDate()
         lblDepartureDelay.text = "\(dataModel.departure?.delay ?? 13) mi"
         checkFlightStatus(status: dataModel.flightStatus)
+        print(dataModel.flightStatus)
     }
     
     private func checkFlightStatus(status: FlightStatusModel?) {

@@ -22,9 +22,7 @@ final class SplashViewController: UIViewController {
     private func redirectPage() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
             if self.checkUserLoginStatus() {
-                //self.showMainPage()
-                self.showLoginPage()
-
+                self.showFlightInfoPage()
             } else {
                 self.showLoginPage()
             }
@@ -36,10 +34,16 @@ final class SplashViewController: UIViewController {
             navigationController?.pushViewController(destinationVC, animated: true)
         }
     }
+    
+    private func showFlightInfoPage() {
+        if let destinationVC = UIStoryboard(name: "FlightInfo", bundle: nil).instantiateInitialViewController() as? FlightInfoViewController {
+            navigationController?.pushViewController(destinationVC, animated: true)
+        }
+    }
 
     
     private func checkUserLoginStatus() -> Bool {
-        return true
+        return UserDefaults.standard.bool(forKey: "userLoginData")
     }
     
 }

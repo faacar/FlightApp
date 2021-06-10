@@ -60,9 +60,9 @@ extension FlightInfoViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         //let flightInfo = flightDataModel[indexPath.row]
         
-        if let detailVC = UIStoryboard(name: "FlightDetail", bundle: nil).instantiateInitialViewController() as? FlightDetailViewController {
+        if let destinationVC = UIStoryboard(name: "FlightDetail", bundle: nil).instantiateInitialViewController() as? FlightDetailViewController {
             
-            let navigationVC = UINavigationController(rootViewController: detailVC)
+            let navigationVC = UINavigationController(rootViewController: destinationVC)
             present(navigationVC, animated: true, completion: nil)
         }
     }

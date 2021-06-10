@@ -24,3 +24,8 @@ struct FlightStatusImage {
     static let cancelled = UIImage(named: "statusRed")
     static let scheduled = UIImage(named: "statusYellow")
 }
+
+struct FlightAppImages {
+    static let checkedCheckbox = UIImage(named: "checkedCheckbox")
+    static let checkbox = UIImage(systemName: "square")
+}
