@@ -71,14 +71,20 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="miniAircraft" translatesAutoresizingMaskIntoConstraints="NO" id="khU-f9-m7Y">
                                                 <rect key="frame" x="135" y="53" width="90" height="22"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esenboğa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9Q-3i-4DN">
-                                                <rect key="frame" x="32" y="87.666666666666686" width="63" height="16.333333333333329"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esenboğa" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9Q-3i-4DN">
+                                                <rect key="frame" x="32" y="87.666666666666686" width="100" height="16.333333333333329"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="YpX-ai-bdQ"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                 <color key="textColor" name="airportTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sabiha Gökçen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lt1-Gu-51x">
-                                                <rect key="frame" x="232" y="87.666666666666686" width="96" height="16.333333333333329"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sabiha Gökçen" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lt1-Gu-51x">
+                                                <rect key="frame" x="228" y="87.666666666666686" width="100" height="16.333333333333329"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="eR0-5G-jZ5"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                 <color key="textColor" name="airportTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -255,6 +261,7 @@
                         <outlet property="lblFlightInfo" destination="8RC-UN-d30" id="ZRK-yo-Xy3"/>
                         <outlet property="lblGateInfo" destination="UVZ-4G-pp6" id="GId-2m-Wvq"/>
                         <outlet property="lblTerminalInfo" destination="ahL-aG-TpJ" id="8OZ-M4-BN2"/>
+                        <outlet property="viewBoardCard" destination="VgD-B4-Kbf" id="HGt-iU-1dR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YFO-Bt-qU5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

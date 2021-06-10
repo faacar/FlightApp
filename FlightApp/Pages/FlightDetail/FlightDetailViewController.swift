@@ -26,6 +26,12 @@ final class FlightDetailViewController: UIViewController {
     @IBOutlet weak private var lblTerminalInfo: UILabel!
     @IBOutlet weak private var lblGateInfo: UILabel!
     @IBOutlet weak private var lblDelayInfo: UILabel!
+    @IBOutlet weak var viewBoardCard: UIView! {
+        didSet {
+            //viewBoardCard.layer.masksToBounds = true
+            viewBoardCard.layer.cornerRadius = 15.0
+        }
+    }
     
     var flightDetail: FlightDataModel?
 
