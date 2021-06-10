@@ -9,11 +9,17 @@ import Foundation
 
 extension String {
     
-    func formatDate() -> String {
+    enum DateConvertType: String {
+        case hourTR = "HH:mm"
+        case hourEN = "HH:mm a"
+        case dayMonth = "E, MMM dd"
+    }
+    
+    func formatDate(type: DateConvertType) -> String {
         let dateFormatterGet = DateFormatter()
         dateFormatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ" // ISO 8601
         let dateFormatterSend = DateFormatter()
-        dateFormatterSend.dateFormat = "HH:mm"
+        dateFormatterSend.dateFormat = type.rawValue
         
         if let date = dateFormatterGet.date(from: self) {
             return dateFormatterSend.string(from: date)

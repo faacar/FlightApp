@@ -8,6 +8,7 @@
 import Foundation
 
 struct DepartureModel: Codable {
+    var airport: String?
     var icao: String?
     var estimated: String?
     var delay: Int?

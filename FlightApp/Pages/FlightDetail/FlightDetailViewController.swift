@@ -10,11 +10,12 @@ import UIKit
 final class FlightDetailViewController: UIViewController {
     
     @IBOutlet weak private var lblFlightDetails: UILabel!
-    @IBOutlet weak private var lblDepartureCode: UILabel!
     
+    @IBOutlet weak private var lblDepartureCode: UILabel!
     @IBOutlet weak private var lblArrivalCode: UILabel!
     @IBOutlet weak private var lblDepartureAirportName: UILabel!
     @IBOutlet weak private var lblArrivalAirportName: UILabel!
+    
     @IBOutlet weak private var lblDepartureDate: UILabel!
     @IBOutlet weak private var lblDepartureTime: UILabel!
     @IBOutlet weak private var lblArrivalDate: UILabel!
@@ -40,7 +41,22 @@ final class FlightDetailViewController: UIViewController {
     }
     
     private func configureFlightDetail() {
-        //lblFlightDetails.text = flightDetail?.FlightDataModel?.FlightModel
+        lblFlightDetails.text = "\(flightDetail?.flight?.number ?? "Unknown") Flight Details"
+        
+        lblDepartureCode.text = flightDetail?.departure?.icao
+        lblArrivalCode.text = flightDetail?.arrival?.icao
+        lblDepartureAirportName.text = flightDetail?.departure?.airport
+        lblArrivalAirportName.text = flightDetail?.arrival?.airport
+        
+        lblDepartureDate.text = flightDetail?.departure?.estimated?.formatDate(type: .dayMonth)
+        lblDepartureTime.text = flightDetail?.departure?.estimated?.formatDate(type: .hourEN)
+        lblArrivalDate.text = flightDetail?.arrival?.estimated?.formatDate(type: .dayMonth)
+        lblArrivalTime.text = flightDetail?.arrival?.estimated?.formatDate(type: .hourEN)
+        
+        lblFlightInfo.text = flightDetail?.flight?.number
+        lblTerminalInfo.text = flightDetail?.departure?.terminal
+        lblGateInfo.text = flightDetail?.departure?.gate
+        lblDelayInfo.text = String(flightDetail?.departure?.delay ?? 0)
     }
     
     
