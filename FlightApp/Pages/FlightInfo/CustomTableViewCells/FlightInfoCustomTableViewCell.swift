@@ -7,8 +7,9 @@
 
 import UIKit
 
-class FlightInfoCustomTableViewCell: UITableViewCell {
+final class FlightInfoCustomTableViewCell: UITableViewCell {
 
+//MARK: - Properties
     static let identifier = "FlightInfoCustomTableViewCell"
     
     @IBOutlet weak var lblAirlineName: UILabel!
@@ -17,16 +18,19 @@ class FlightInfoCustomTableViewCell: UITableViewCell {
     @IBOutlet weak var imgFlightStatus: UIImageView!
     @IBOutlet weak var lblDepartureDelay: UILabel!
     
-    
+//MARK: - Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
+    //MARK: - Functions
     func configureCell(dataModel: FlightDataModel) {
+        let departureInfo = "\(dataModel.departure?.icao ?? "N/A") - \(dataModel.departure?.estimated?.formatDate(type: .hourTR) ?? "N/A")"
+        let arrivalInfo = "\(dataModel.arrival?.icao ?? "N/A") - \(dataModel.arrival?.estimated?.formatDate(type: .hourTR) ?? "N/A")"
         lblAirlineName.text = dataModel.airline?.name
-        lblDepartureEstimated.text = dataModel.departure?.estimated?.formatDate(type: .hourTR)
-        lblArrivalEstimated.text = dataModel.arrival?.estimated?.formatDate(type: .hourTR)
+        lblDepartureEstimated.text = departureInfo
+        lblArrivalEstimated.text = arrivalInfo
         lblDepartureDelay.text = "\(dataModel.departure?.delay ?? 13) mi"
         checkFlightStatus(status: dataModel.flightStatus)
     }
@@ -43,11 +47,4 @@ class FlightInfoCustomTableViewCell: UITableViewCell {
             imgFlightStatus.isHidden = true
         }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }

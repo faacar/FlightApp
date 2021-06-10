@@ -9,6 +9,7 @@ import UIKit
 
 final class FlightDetailViewController: UIViewController {
     
+//MARK: - Properties
     @IBOutlet weak private var lblFlightDetails: UILabel!
     
     @IBOutlet weak private var lblDepartureCode: UILabel!
@@ -28,7 +29,7 @@ final class FlightDetailViewController: UIViewController {
     
     var flightDetail: FlightDataModel?
 
-    
+//MARK: - Life Cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
@@ -40,6 +41,7 @@ final class FlightDetailViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
+//MARK: - Functions
     private func configureFlightDetail() {
         lblFlightDetails.text = "\(flightDetail?.flight?.number ?? "Unknown") Flight Details"
         

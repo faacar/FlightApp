@@ -7,7 +7,7 @@
 
 import Foundation
 
-class NetworkManager {
+final class NetworkManager {
     
     func getFlightInfo(completionHandler: @escaping ((FlightAppResponse) -> Void)) {
         let requestURL = "\(Constants.baseURL)\(Constants.flightSearch)\(Constants.apiKey)"

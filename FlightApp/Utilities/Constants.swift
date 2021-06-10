@@ -28,4 +28,5 @@ struct FlightStatusImage {
 struct FlightAppImages {
     static let checkedCheckbox = UIImage(named: "checkedCheckbox")
     static let checkbox = UIImage(systemName: "square")
+    static let signoutButtonImage = UIImage(named: "signout")
 }

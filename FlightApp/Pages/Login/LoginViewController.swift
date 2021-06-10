@@ -7,10 +7,9 @@
 
 import UIKit
 
-
 final class LoginViewController: UIViewController {
     
-
+//MARK: - Properties
     @IBOutlet weak private var tfEmail: UITextField!
     @IBOutlet weak private var tfPassword: UITextField!
     @IBOutlet weak private var btnRememberMe: UIButton!    
@@ -23,15 +22,17 @@ final class LoginViewController: UIViewController {
     
     var isRememberMeButtonClicked = false
     
+//MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+//MARK: - Functions
     private func loginUser() {
         let email = tfEmail.text
         let password = tfPassword.text
         //appcent@appcent.mobi -- 123456
-        if email == "a" && password == "a" {
+        if email == "appcent@appcent.mobi" && password == "123456" {
             if isRememberMeButtonClicked {
                 saveUser()
             }

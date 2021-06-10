@@ -9,16 +9,18 @@ import UIKit
 
 final class FlightInfoViewController: UIViewController {
     
+//MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
     
     lazy var networkManager = NetworkManager()
     var flightDataModel = [FlightDataModel]()
     
+//MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationBar()
         configureTableView()
-
+        configureBarButton()
     }
 
     override func viewWillLayoutSubviews() {
@@ -51,9 +53,21 @@ final class FlightInfoViewController: UIViewController {
         let image = UIGraphicsGetImageFromCurrentImageContext()
         self.navigationController!.navigationBar.setBackgroundImage(image, for: UIBarMetrics.default)
     }
-
+    
+    private func configureBarButton() {
+        navigationController?.navigationBar.tintColor = .white
+        let signoutButton = UIBarButtonItem(image: FlightAppImages.signoutButtonImage, style: .plain, target: self, action: #selector(signout))
+        navigationItem.rightBarButtonItem = signoutButton
+    }
+    
+    @objc func signout() {
+        print("button tapped")
+        UserDefaults.standard.removeObject(forKey: "userLoginData")
+        navigationController?.popToRootViewController(animated: true)
+    }
 }
 
+//MARK: - Extension UITableViewDelegate
 extension FlightInfoViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -67,6 +81,7 @@ extension FlightInfoViewController: UITableViewDelegate {
     }
 }
 
+//MARK: - Extension UITableViewDataSource
 extension FlightInfoViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
