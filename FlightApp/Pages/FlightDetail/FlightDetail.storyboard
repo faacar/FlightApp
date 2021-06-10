@@ -1,30 +1,282 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XB0-pw-oeo">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q5G-Lv-gMZ">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Flight Detail View Controller-->
-        <scene sceneID="uEO-xh-5TK">
+        <scene sceneID="Sin-l7-tms">
             <objects>
-                <viewController id="XB0-pw-oeo" customClass="FlightDetailViewController" customModule="FlightApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ath-K4-xQW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <viewController id="Q5G-Lv-gMZ" customClass="FlightDetailViewController" customModule="FlightApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g5s-QT-XNa">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="zW8-qJ-PuL"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginScreenBG" translatesAutoresizingMaskIntoConstraints="NO" id="9bi-8R-89q">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="280"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usv-rg-4Dt">
+                                <rect key="frame" x="350" y="74" width="16" height="22"/>
+                                <state key="normal" image="closeButton"/>
+                                <connections>
+                                    <action selector="actionClose:" destination="Q5G-Lv-gMZ" eventType="touchUpInside" id="BKD-s3-q40"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PX100 Flight Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqO-zV-cFi">
+                                <rect key="frame" x="16" y="78" width="215.66666666666666" height="28"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VgD-B4-Kbf" userLabel="BoardView">
+                                <rect key="frame" x="15" y="331" width="360" height="444"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RectangleLine" translatesAutoresizingMaskIntoConstraints="NO" id="pLL-b2-KN9">
+                                        <rect key="frame" x="32" y="410" width="296" height="1"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="Y7c-uT-qR4"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X46-Qg-RAR" userLabel="BlueView">
+                                        <rect key="frame" x="0.0" y="0.0" width="360" height="225.33333333333334"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ESB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJN-gA-670">
+                                                <rect key="frame" x="32" y="40" width="78" height="46.666666666666657"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="40"/>
+                                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cI-qx-ulR">
+                                                <rect key="frame" x="240" y="40" width="88" height="46.666666666666657"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="40"/>
+                                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="miniAircraft" translatesAutoresizingMaskIntoConstraints="NO" id="khU-f9-m7Y">
+                                                <rect key="frame" x="135" y="53" width="90" height="22"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esenboğa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9Q-3i-4DN">
+                                                <rect key="frame" x="32" y="87.666666666666686" width="63" height="16.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                                <color key="textColor" name="airportTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sabiha Gökçen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lt1-Gu-51x">
+                                                <rect key="frame" x="232" y="87.666666666666686" width="96" height="16.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                                <color key="textColor" name="airportTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thu, Agu 17" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fl6-Lk-tJg">
+                                                <rect key="frame" x="32.000000000000007" y="128" width="86.666666666666686" height="18.666666666666657"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:40 AM" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shk-Iw-aPF">
+                                                <rect key="frame" x="32" y="147.66666666666669" width="60" height="18.666666666666657"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thu, Agu 17" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1Y-kR-b87">
+                                                <rect key="frame" x="241.33333333333329" y="128" width="86.666666666666657" height="18.666666666666657"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:50 AM" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSs-Jy-YcM">
+                                                <rect key="frame" x="259" y="147.66666666666669" width="69" height="18.666666666666657"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="FlightDetailBoardBLue"/>
+                                        <constraints>
+                                            <constraint firstItem="shk-Iw-aPF" firstAttribute="leading" secondItem="X46-Qg-RAR" secondAttribute="leading" constant="32" id="3ed-gi-6dS"/>
+                                            <constraint firstAttribute="trailing" secondItem="G1Y-kR-b87" secondAttribute="trailing" constant="32" id="7Fv-H0-E6C"/>
+                                            <constraint firstItem="LJN-gA-670" firstAttribute="leading" secondItem="X46-Qg-RAR" secondAttribute="leading" constant="32" id="AEm-RF-TGf"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZSs-Jy-YcM" secondAttribute="trailing" constant="32" id="CrK-5z-XT4"/>
+                                            <constraint firstItem="I9Q-3i-4DN" firstAttribute="top" secondItem="LJN-gA-670" secondAttribute="bottom" constant="1" id="Ird-v1-RcY"/>
+                                            <constraint firstAttribute="width" secondItem="X46-Qg-RAR" secondAttribute="height" multiplier="345:216" id="Ocy-MI-7mU"/>
+                                            <constraint firstItem="fl6-Lk-tJg" firstAttribute="top" secondItem="I9Q-3i-4DN" secondAttribute="bottom" constant="24" id="Pnv-KH-Byi"/>
+                                            <constraint firstItem="ZSs-Jy-YcM" firstAttribute="top" secondItem="G1Y-kR-b87" secondAttribute="bottom" constant="1" id="RfA-sM-pH6"/>
+                                            <constraint firstItem="shk-Iw-aPF" firstAttribute="top" secondItem="fl6-Lk-tJg" secondAttribute="bottom" constant="1" id="T6c-ol-Tgx"/>
+                                            <constraint firstAttribute="trailing" secondItem="lt1-Gu-51x" secondAttribute="trailing" constant="32" id="UKl-GS-Vpc"/>
+                                            <constraint firstItem="khU-f9-m7Y" firstAttribute="top" secondItem="X46-Qg-RAR" secondAttribute="top" constant="53" id="Vsn-tp-RdW"/>
+                                            <constraint firstItem="7cI-qx-ulR" firstAttribute="top" secondItem="X46-Qg-RAR" secondAttribute="top" constant="40" id="bMx-ag-gev"/>
+                                            <constraint firstItem="lt1-Gu-51x" firstAttribute="top" secondItem="7cI-qx-ulR" secondAttribute="bottom" constant="1" id="d4f-kR-kA9"/>
+                                            <constraint firstItem="LJN-gA-670" firstAttribute="top" secondItem="X46-Qg-RAR" secondAttribute="top" constant="40" id="jFp-RH-6Vf"/>
+                                            <constraint firstItem="I9Q-3i-4DN" firstAttribute="leading" secondItem="X46-Qg-RAR" secondAttribute="leading" constant="32" id="jWq-lx-D9e"/>
+                                            <constraint firstItem="khU-f9-m7Y" firstAttribute="centerX" secondItem="X46-Qg-RAR" secondAttribute="centerX" id="lqH-OZ-KHo"/>
+                                            <constraint firstItem="fl6-Lk-tJg" firstAttribute="leading" secondItem="X46-Qg-RAR" secondAttribute="leading" constant="32" id="uaS-xu-FnM"/>
+                                            <constraint firstAttribute="trailing" secondItem="7cI-qx-ulR" secondAttribute="trailing" constant="32" id="xtB-Zg-tdp"/>
+                                            <constraint firstItem="G1Y-kR-b87" firstAttribute="top" secondItem="lt1-Gu-51x" secondAttribute="bottom" constant="24" id="yd2-tv-6od"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="H8p-63-DAl">
+                                        <rect key="frame" x="32.000000000000007" y="265.33333333333337" width="112.66666666666669" height="18.666666666666686"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flight :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6n-ai-XvK">
+                                                <rect key="frame" x="0.0" y="0.0" width="48.333333333333336" height="18.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PX100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8RC-UN-d30">
+                                                <rect key="frame" x="64.333333333333329" y="0.0" width="48.333333333333329" height="18.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                                <color key="textColor" name="FlightDetailBoardBLue"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="R0N-6z-Hwb">
+                                        <rect key="frame" x="32" y="316" width="96" height="18.666666666666686"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terminal :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3d-ue-bHi">
+                                                <rect key="frame" x="0.0" y="0.0" width="68.666666666666671" height="18.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahL-aG-TpJ">
+                                                <rect key="frame" x="84.666666666666657" y="0.0" width="11.333333333333329" height="18.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                                <color key="textColor" name="FlightDetailBoardBLue"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="GvR-YS-DB2">
+                                        <rect key="frame" x="225.33333333333334" y="265.33333333333337" width="102.66666666666666" height="18.666666666666686"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gate :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wam-cD-51v">
+                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="18.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVZ-4G-pp6">
+                                                <rect key="frame" x="59.333333333333343" y="0.0" width="43.333333333333343" height="18.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                                <color key="textColor" name="FlightDetailBoardBLue"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Epj-rj-mmZ">
+                                        <rect key="frame" x="214" y="316" width="114" height="18.666666666666686"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delay :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtP-oq-gmX">
+                                                <rect key="frame" x="0.0" y="0.0" width="49" height="18.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hm4-x7-A3g">
+                                                <rect key="frame" x="65" y="0.0" width="49" height="18.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                                <color key="textColor" name="FlightDetailBoardBLue"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="X46-Qg-RAR" firstAttribute="top" secondItem="VgD-B4-Kbf" secondAttribute="top" id="4GJ-Xb-IwJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="pLL-b2-KN9" secondAttribute="bottom" constant="33" id="6to-2B-Dmf"/>
+                                    <constraint firstAttribute="trailing" secondItem="Epj-rj-mmZ" secondAttribute="trailing" constant="32" id="7bv-sj-fgu"/>
+                                    <constraint firstAttribute="trailing" secondItem="pLL-b2-KN9" secondAttribute="trailing" constant="32" id="838-Ql-RK7"/>
+                                    <constraint firstItem="H8p-63-DAl" firstAttribute="top" secondItem="X46-Qg-RAR" secondAttribute="bottom" constant="40" id="Mfs-6Z-EAX"/>
+                                    <constraint firstItem="R0N-6z-Hwb" firstAttribute="top" secondItem="H8p-63-DAl" secondAttribute="bottom" constant="32" id="Mrp-HU-gc6"/>
+                                    <constraint firstAttribute="trailing" secondItem="GvR-YS-DB2" secondAttribute="trailing" constant="32" id="f6w-jn-doj"/>
+                                    <constraint firstItem="pLL-b2-KN9" firstAttribute="leading" secondItem="VgD-B4-Kbf" secondAttribute="leading" constant="32" id="moT-h1-AdR"/>
+                                    <constraint firstItem="GvR-YS-DB2" firstAttribute="top" secondItem="X46-Qg-RAR" secondAttribute="bottom" constant="40" id="qCA-NQ-gzn"/>
+                                    <constraint firstItem="X46-Qg-RAR" firstAttribute="leading" secondItem="VgD-B4-Kbf" secondAttribute="leading" id="qXc-um-1W2"/>
+                                    <constraint firstItem="H8p-63-DAl" firstAttribute="leading" secondItem="VgD-B4-Kbf" secondAttribute="leading" constant="32" id="sje-TR-XaF"/>
+                                    <constraint firstAttribute="trailing" secondItem="X46-Qg-RAR" secondAttribute="trailing" id="uvA-d3-qrc"/>
+                                    <constraint firstItem="Epj-rj-mmZ" firstAttribute="top" secondItem="GvR-YS-DB2" secondAttribute="bottom" constant="32" id="vE6-cV-x0Q"/>
+                                    <constraint firstItem="R0N-6z-Hwb" firstAttribute="leading" secondItem="VgD-B4-Kbf" secondAttribute="leading" constant="32" id="ybI-NF-cLL"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="airbusBG" translatesAutoresizingMaskIntoConstraints="NO" id="moJ-AE-7P2">
+                                <rect key="frame" x="0.0" y="54" width="373" height="259"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dAi-m0-DLK"/>
+                        <color key="backgroundColor" name="FlightDetailBGColor"/>
+                        <constraints>
+                            <constraint firstItem="dAi-m0-DLK" firstAttribute="trailing" secondItem="9bi-8R-89q" secondAttribute="trailing" id="5fS-1o-LLb"/>
+                            <constraint firstItem="VgD-B4-Kbf" firstAttribute="top" secondItem="9bi-8R-89q" secondAttribute="bottom" constant="51" id="EAj-35-GLG"/>
+                            <constraint firstItem="moJ-AE-7P2" firstAttribute="leading" secondItem="dAi-m0-DLK" secondAttribute="leading" id="EJr-Y6-Nvo"/>
+                            <constraint firstItem="dAi-m0-DLK" firstAttribute="trailing" secondItem="moJ-AE-7P2" secondAttribute="trailing" constant="17" id="NGf-yr-PF7"/>
+                            <constraint firstItem="oqO-zV-cFi" firstAttribute="top" secondItem="dAi-m0-DLK" secondAttribute="top" constant="34" id="OcJ-pH-J95"/>
+                            <constraint firstItem="usv-rg-4Dt" firstAttribute="top" secondItem="dAi-m0-DLK" secondAttribute="top" constant="30" id="Roh-SK-F7F"/>
+                            <constraint firstItem="oqO-zV-cFi" firstAttribute="leading" secondItem="dAi-m0-DLK" secondAttribute="leading" constant="16" id="VvB-no-4FM"/>
+                            <constraint firstAttribute="bottom" secondItem="VgD-B4-Kbf" secondAttribute="bottom" constant="69" id="XhB-qt-34q"/>
+                            <constraint firstItem="VgD-B4-Kbf" firstAttribute="leading" secondItem="dAi-m0-DLK" secondAttribute="leading" constant="15" id="XrS-NH-wC0"/>
+                            <constraint firstItem="moJ-AE-7P2" firstAttribute="top" secondItem="dAi-m0-DLK" secondAttribute="top" constant="10" id="aHi-Kl-t5W"/>
+                            <constraint firstItem="9bi-8R-89q" firstAttribute="leading" secondItem="g5s-QT-XNa" secondAttribute="leading" id="jo8-vD-dFr"/>
+                            <constraint firstItem="dAi-m0-DLK" firstAttribute="trailing" secondItem="VgD-B4-Kbf" secondAttribute="trailing" constant="15" id="owf-fl-Lnk"/>
+                            <constraint firstItem="dAi-m0-DLK" firstAttribute="trailing" secondItem="usv-rg-4Dt" secondAttribute="trailing" constant="24" id="ve6-eL-5af"/>
+                            <constraint firstItem="9bi-8R-89q" firstAttribute="top" secondItem="g5s-QT-XNa" secondAttribute="top" id="wfL-hI-fAQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblArrivalAirportName" destination="lt1-Gu-51x" id="fKs-YD-Qi1"/>
+                        <outlet property="lblArrivalCode" destination="7cI-qx-ulR" id="t2U-RA-bAr"/>
+                        <outlet property="lblArrivalDate" destination="G1Y-kR-b87" id="43E-g5-D5F"/>
+                        <outlet property="lblArrivalTime" destination="ZSs-Jy-YcM" id="uvG-8V-gsX"/>
+                        <outlet property="lblDelayInfo" destination="Hm4-x7-A3g" id="4JH-lA-LYq"/>
+                        <outlet property="lblDepartureAirportName" destination="I9Q-3i-4DN" id="V4Q-w5-PyA"/>
+                        <outlet property="lblDepartureCode" destination="LJN-gA-670" id="dmR-US-fFk"/>
+                        <outlet property="lblDepartureDate" destination="fl6-Lk-tJg" id="WkC-ya-TJ3"/>
+                        <outlet property="lblDepartureTime" destination="shk-Iw-aPF" id="iF2-SG-MbA"/>
+                        <outlet property="lblFlightDetails" destination="oqO-zV-cFi" id="VGo-nF-83g"/>
+                        <outlet property="lblFlightInfo" destination="8RC-UN-d30" id="ZRK-yo-Xy3"/>
+                        <outlet property="lblGateInfo" destination="UVZ-4G-pp6" id="GId-2m-Wvq"/>
+                        <outlet property="lblTerminalInfo" destination="ahL-aG-TpJ" id="8OZ-M4-BN2"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="df8-uJ-9br" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YFO-Bt-qU5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="81" y="89"/>
+            <point key="canvasLocation" x="1153.6231884057972" y="92.410714285714278"/>
         </scene>
     </scenes>
     <resources>
+        <image name="RectangleLine" width="281" height="1"/>
+        <image name="airbusBG" width="360" height="259"/>
+        <image name="closeButton" width="16" height="16"/>
+        <image name="loginScreenBG" width="374" height="280"/>
+        <image name="miniAircraft" width="90" height="22"/>
+        <namedColor name="FlightDetailBGColor">
+            <color red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FlightDetailBoardBLue">
+            <color red="0.10980392156862745" green="0.3411764705882353" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="airportTextColor">
+            <color red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

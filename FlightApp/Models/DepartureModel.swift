@@ -11,4 +11,6 @@ struct DepartureModel: Codable {
     var icao: String?
     var estimated: String?
     var delay: Int?
+    var terminal: String?
+    var gate: String?
 }

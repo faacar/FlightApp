@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7270E21D26714D3100BDA379 /* FlightInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7270E21C26714D3100BDA379 /* FlightInfoViewController.swift */; };
 		7270E22126714D3D00BDA379 /* FlightInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7270E22026714D3D00BDA379 /* FlightInfo.storyboard */; };
+		72A1B2BE267278ED001B3AE3 /* FlightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A1B2BD267278ED001B3AE3 /* FlightModel.swift */; };
 		72B376602671EE8300A2E60A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3765F2671EE8300A2E60A /* NetworkManager.swift */; };
 		72B376652671EEA600A2E60A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B376642671EEA600A2E60A /* Constants.swift */; };
 		72B376692671F10C00A2E60A /* FlightAppResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B376682671F10C00A2E60A /* FlightAppResponse.swift */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		7270E21C26714D3100BDA379 /* FlightInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightInfoViewController.swift; sourceTree = "<group>"; };
 		7270E22026714D3D00BDA379 /* FlightInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FlightInfo.storyboard; sourceTree = "<group>"; };
+		72A1B2BD267278ED001B3AE3 /* FlightModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightModel.swift; sourceTree = "<group>"; };
 		72B3765F2671EE8300A2E60A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		72B376642671EEA600A2E60A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		72B376682671F10C00A2E60A /* FlightAppResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightAppResponse.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				72B376742671F57800A2E60A /* ArrivalModel.swift */,
 				72B3766E2671F41C00A2E60A /* FlightStatusModel.swift */,
 				72B376782671F60100A2E60A /* AirlineModel.swift */,
+				72A1B2BD267278ED001B3AE3 /* FlightModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				72B3766F2671F41C00A2E60A /* FlightStatusModel.swift in Sources */,
 				72B376692671F10C00A2E60A /* FlightAppResponse.swift in Sources */,
 				72B376722671F51600A2E60A /* DepartureModel.swift in Sources */,
+				72A1B2BE267278ED001B3AE3 /* FlightModel.swift in Sources */,
 				72B376872672336200A2E60A /* FlightDetailViewController.swift in Sources */,
 				72B3769626724F0600A2E60A /* UIViewController+Ext.swift in Sources */,
 				72B3766C2671F39400A2E60A /* FlightDataModel.swift in Sources */,
