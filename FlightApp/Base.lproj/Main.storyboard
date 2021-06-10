@@ -22,10 +22,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenPlane " translatesAutoresizingMaskIntoConstraints="NO" id="Xmc-mt-CVr">
-                                <rect key="frame" x="49" y="317" width="316" height="164"/>
+                                <rect key="frame" x="49" y="361" width="316" height="164"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flight     App" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYd-cL-qd8">
-                                <rect key="frame" x="96" y="498" width="222" height="114.5"/>
+                                <rect key="frame" x="96" y="542" width="222" height="114.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dYd-cL-qd8" secondAttribute="height" multiplier="182:94" id="vv9-9z-fyB"/>
                                 </constraints>
@@ -55,10 +55,15 @@
         <!--Navigation Controller-->
         <scene sceneID="VQ7-4Q-U6O">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="aqt-W9-ana" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aqt-W9-ana" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zjs-pe-2gs">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

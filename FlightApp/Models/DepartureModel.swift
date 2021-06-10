@@ -10,4 +10,5 @@ import Foundation
 struct DepartureModel: Codable {
     var icao: String?
     var estimated: String?
+    var delay: Int?
 }

@@ -9,7 +9,7 @@ import Foundation
 
 struct FlightDataModel: Codable {
     var flightStatus: FlightStatusModel?
-    var departure: DepartureModel? //
+    var departure: DepartureModel?
     var arrival: ArrivalModel?
     var airline: AirlineModel?
     

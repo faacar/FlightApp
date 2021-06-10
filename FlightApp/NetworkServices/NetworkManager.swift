@@ -11,6 +11,7 @@ class NetworkManager {
     
     func getFlightInfo(completionHandler: @escaping ((FlightAppResponse) -> Void)) {
         let requestURL = "\(Constants.baseURL)\(Constants.flightSearch)\(Constants.apiKey)"
+        //http://api.aviationstack.com/v1/flights?access_key=5fd1444ffd085679e9a695ec84a89ef2
         print(requestURL)
         guard let url = URL(string: requestURL) else { return }
         let session = URLSession.shared
@@ -22,9 +23,7 @@ class NetworkManager {
             let decoder = JSONDecoder()
             do {
                 let callResult = try decoder.decode(FlightAppResponse.self, from: data)
-                print("calisiyo")
                 DispatchQueue.main.async {
-                    print("\(callResult) aaaaa")
                     completionHandler(callResult)
                 }
             } catch {
@@ -32,25 +31,4 @@ class NetworkManager {
             }
         }.resume()
     }
-    
-//    func getMovieList(keyword: String, completionHandler: @escaping ((FilmListResponse) -> Void)) {
-//        guard let url = URL(string: Constants.baseUrl + Constants.apiKey + Constants.search + keyword) else { return }
-//        let session = URLSession.shared
-//        session.dataTask(with: u(rl) { data, response, error in
-//            if let data = data {
-//                let decoder = JSONDecoder()
-//                do {
-//                    let decodedModel = try decoder.decode(FilmListResponse.self, from: data)
-//                    DispatchQueue.main.async {
-//                        completionHandler(decodedModel)
-//                    }
-//                    print("Başarılı")
-//                } catch {
-//                    print("Hatalı")
-//                }
-//            } else {
-//                print("Response hatalı")
-//            }
-//        }.resume()
-//    }
 }

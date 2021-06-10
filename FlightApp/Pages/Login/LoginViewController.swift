@@ -39,7 +39,6 @@ final class LoginViewController: UIViewController {
     
     
     @IBAction func actionLogin(_ sender: Any) {
-        print("button clicked")
         loginUser()
     }
     
