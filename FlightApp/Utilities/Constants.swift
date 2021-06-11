@@ -23,6 +23,7 @@ struct FlightStatusImage {
     static let active = UIImage(named: "statusGreen")
     static let cancelled = UIImage(named: "statusRed")
     static let scheduled = UIImage(named: "statusYellow")
+    static let landed = UIImage(named: "statusOrange")
 }
 
 struct FlightAppImages {

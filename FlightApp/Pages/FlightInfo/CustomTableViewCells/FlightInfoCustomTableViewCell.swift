@@ -43,6 +43,9 @@ final class FlightInfoCustomTableViewCell: UITableViewCell {
             imgFlightStatus.image = FlightStatusImage.cancelled
         case .scheduled:
             imgFlightStatus.image = FlightStatusImage.scheduled
+        case .landed:
+            imgFlightStatus.image = FlightStatusImage.landed
+
         case .none:
             imgFlightStatus.isHidden = true
         }

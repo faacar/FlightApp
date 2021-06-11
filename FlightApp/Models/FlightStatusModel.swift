@@ -11,6 +11,7 @@ enum FlightStatusModel: String, Codable {
     case active = "active"
     case cancelled = "cancelled"
     case scheduled = "scheduled"
+    case landed = "landed"
 }
 
 
